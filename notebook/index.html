@@ -23,11 +23,9 @@
                     <input type="search" class="form-control input-search">
                     <button class="btn btn-primary btn-search" type="submit">Search</button>
                 </div>
-
                 <h5>All notes</h5>
-
                 <div class="listnote scrollbar-primary">
-                    <div class="card">
+                    <div class="card note-item">
                         <div class="card-body">
                             Note1: This is some text within a card body
                         </div>
@@ -71,7 +69,22 @@
                 </div>
             </div>
             <div class="col-sm-8">
-                One of three columns
+                <form class="note-form">
+                    <div class="form-group">
+                      <label for="txt-title">Note Title</label>
+                      <input type="name" class="form-control" id="txt-title">
+                    </div>
+                    <div class="form-group">
+                      <label for="txt-body">Note Detail</label>
+                      <textarea class="form-control" id="txt-body" rows="15"></textarea>
+                    </div>
+                    <div class="form-group btn-container">
+                        <button type="button" class="btn btn-success btn-new">New</button>
+                        <button type="button" class="btn btn-primary action-btn">Save</button>
+                        <button type="button" class="btn btn-danger action-btn">Delete</button>
+                        
+                      </div>
+                  </form>
             </div>
         </div>
 

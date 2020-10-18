@@ -76,3 +76,23 @@ body {
 .scrollbar-primary {
     scrollbar-color: #FF9800 #ffffff;
 }
+.note-form{
+     margin-top: 10px;
+}
+.btn-container{
+    display: flex;
+    justify-content: flex-end;
+}
+.action-btn{
+    width: 80px;
+    margin-left: 10px;
+}
+
+.note-item{
+    background-color: #FF9800;
+    color:white
+}
+.btn-new{
+    width: 80px;
+    margin-right: auto  ;
+}

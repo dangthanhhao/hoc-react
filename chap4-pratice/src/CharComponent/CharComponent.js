@@ -1,8 +1,9 @@
 import React from 'react'
-import './CharComponent.css'
+import classes from './CharComponent.module.css';
 function CharComponent(props) {
     return (
-        <div className="char-box" onClick={props.click}>
+        <div className={classes['char-box']} onClick={props.click}>
+            <p className={classes.pp}>Ny name is</p>
             {props.char}
         </div>
     )
