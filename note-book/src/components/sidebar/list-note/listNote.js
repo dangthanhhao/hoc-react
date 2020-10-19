@@ -1,49 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-export default function listNote() {
+const ListNote= (props) =>{
+
+
+    const selectedOnClick=(note)=>{
+
+        props.seletedAction(note)
+    }
+
+    const noteItems=props.notes.map(item => {
+        let style="card"
+        if (props.seletednotes&&item.id===props.seletednotes.id)
+            style= style+ " note-item"
+        return (<div
+            key={item.id}
+            className={style} 
+            onClick={()=>selectedOnClick(item)}
+        >
+            <div className="card-body">
+                {item.title}
+            </div>
+        </div>);
+    })
+
+   
     return (
         <div className="listnote scrollbar-primary">
-        <div className="card note-item">
-            <div className="card-body">
-                Note1: This is some text within a card body
-            </div>
+            {noteItems}
         </div>
-        <div className="card">
-            <div className="card-body">
-                Note1: This is some text within a card body
-            </div>
-        </div>
-        <div className="card">
-            <div className="card-body">
-                Note1: This is some text within a card body
-            </div>
-        </div>
-        <div className="card">
-            <div className="card-body">
-                Note1: This is some text within a card body
-            </div>
-        </div>
-        <div className="card">
-            <div className="card-body">
-                Note1: This is some text within a card body
-            </div>
-        </div>
-        <div className="card">
-            <div className="card-body">
-                Note1: This is some text within a card body
-            </div>
-        </div>
-        <div className="card">
-            <div className="card-body">
-                Note1: This is some text within a card body
-            </div>
-        </div>
-        <div className="card">
-            <div className="card-body">
-                Note1: This is some text within a card body
-            </div>
-        </div>
-
-    </div>
     )
 }
+export default ListNote

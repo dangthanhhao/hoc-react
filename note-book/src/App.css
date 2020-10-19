@@ -24,7 +24,7 @@
 }
 
 .listnote:hover .card {
-    filter: blur(5px);
+    
     opacity: 0.9;
     transform: scale(0.8);
 }
