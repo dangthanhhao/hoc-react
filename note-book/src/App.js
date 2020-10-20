@@ -31,6 +31,7 @@ function App() {
       
     })
     setNotes(newNotes)
+    newNote()
    }
    const newNote=()=>{
      let maxID=0
