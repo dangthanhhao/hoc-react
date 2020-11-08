@@ -4,7 +4,9 @@ import ListNote from './list-note/listNote'
 
 const SideBar = (props) => {
     const originNotes = props.notes
-    const [cloneNotes, setClone] = useState([...originNotes])
+    const [cloneNotes, setClone] = useState(originNotes)
+    if (cloneNotes!=originNotes)
+        setClone(originNotes)
     const search = (event) => {
         setClone(originNotes.filter(item=>item.title.includes(event.target.value)))
     }

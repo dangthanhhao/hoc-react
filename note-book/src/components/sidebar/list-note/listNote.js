@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 const ListNote= (props) =>{
 
-
+console.log ("render listnote", props.notes)
     const selectedOnClick=(note)=>{
 
         props.seletedAction(note)
